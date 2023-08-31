@@ -1,0 +1,21 @@
+﻿@model MovieFormViewModel
+@{ 
+    ViewData["Title"] = "Movie Form";
+}
+
+<h2>
+    Create Movie
+</h2>
+<hr />
+
+<section class="row">
+    <div class="col-md-4">
+        <form method="POST" asp-action="Create">
+            <div class="form-group">
+                <label class="text-muted" asp-for="Title"></label>
+                <input type="text" class="form-control" asp-for="Title" maxlength="250" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+</section>
